@@ -1,0 +1,995 @@
+{
+  "name": "Cybersecurity news",
+  "nodes": [
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "68820fa3-8172-4f2b-bd10-126e114b290c",
+              "name": "pubDate",
+              "value": "={{ $json.pubDate }}",
+              "type": "string"
+            },
+            {
+              "id": "39617da8-e8b6-4393-a6af-4ef843f958a3",
+              "name": "title",
+              "value": "={{ $json.title }}",
+              "type": "string"
+            },
+            {
+              "id": "42d208f3-46e1-49f7-947e-6bfaa7d02bd6",
+              "name": "content",
+              "value": "={{ $json.content }}",
+              "type": "string"
+            },
+            {
+              "id": "10ab4543-9b63-4400-a23f-29a3fb5eeb38",
+              "name": "link",
+              "value": "={{ $json.link }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        448,
+        224
+      ],
+      "id": "d898da48-a917-4b27-9253-fa06c47b6504",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        1344,
+        608
+      ],
+      "id": "5b143896-1ecf-4602-a005-152c00b7ae24",
+      "name": "Aggregate"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "68820fa3-8172-4f2b-bd10-126e114b290c",
+              "name": "pubDate",
+              "value": "={{ $json.pubDate }}",
+              "type": "string"
+            },
+            {
+              "id": "39617da8-e8b6-4393-a6af-4ef843f958a3",
+              "name": "title",
+              "value": "={{ $json.title }}",
+              "type": "string"
+            },
+            {
+              "id": "42d208f3-46e1-49f7-947e-6bfaa7d02bd6",
+              "name": "content",
+              "value": "={{ $json.content }}",
+              "type": "string"
+            },
+            {
+              "id": "180981bc-a3f1-444a-b814-c77b7c8cdafc",
+              "name": "link",
+              "value": "={{ $json.link }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        448,
+        416
+      ],
+      "id": "4751a58b-a9fe-4cc8-aef7-ac1f0c66482a",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "url": "https://thehackernews.com/feeds/posts/default/-/Vulnerability?alt=rss",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        224,
+        224
+      ],
+      "id": "fb5c6ef1-77af-4a53-852e-7d81dc327969",
+      "name": "HackerNews",
+      "retryOnFail": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "68820fa3-8172-4f2b-bd10-126e114b290c",
+              "name": "pubDate",
+              "value": "={{ $json.pubDate }}",
+              "type": "string"
+            },
+            {
+              "id": "39617da8-e8b6-4393-a6af-4ef843f958a3",
+              "name": "title",
+              "value": "={{ $json.title }}",
+              "type": "string"
+            },
+            {
+              "id": "42d208f3-46e1-49f7-947e-6bfaa7d02bd6",
+              "name": "content",
+              "value": "={{ $json.content }}",
+              "type": "string"
+            },
+            {
+              "id": "5888d914-99a9-45f0-85b7-15cbc4bd2129",
+              "name": "link",
+              "value": "={{ $json.link }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        224,
+        0
+      ],
+      "id": "81005231-1cd9-431f-8b6c-c0a267e76fc6",
+      "name": "Edit Fields2"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "68820fa3-8172-4f2b-bd10-126e114b290c",
+              "name": "pubDate",
+              "value": "={{ $json.pubDate }}",
+              "type": "string"
+            },
+            {
+              "id": "39617da8-e8b6-4393-a6af-4ef843f958a3",
+              "name": "title",
+              "value": "={{ $json.title }}",
+              "type": "string"
+            },
+            {
+              "id": "42d208f3-46e1-49f7-947e-6bfaa7d02bd6",
+              "name": "content",
+              "value": "={{ $json.content }}",
+              "type": "string"
+            },
+            {
+              "id": "821cf5f2-39e2-4a15-8395-eb3070b465ff",
+              "name": "link",
+              "value": "={{ $json.link }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        448,
+        608
+      ],
+      "id": "48638d89-c9ea-4e76-bb09-e2772fd9d392",
+      "name": "Edit Fields3"
+    },
+    {
+      "parameters": {
+        "numberInputs": 10
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        672,
+        480
+      ],
+      "id": "46eb64d3-8b9b-4cd7-a0fc-39ff84b27c9a",
+      "name": "Merge",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "url": "https://whitehat.vn/tin-tuc-an-ninh-mang/index.rss",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        224,
+        608
+      ],
+      "id": "e40b532f-cbb1-42c9-818c-f985bb26e5e1",
+      "name": "Whitehat vn",
+      "retryOnFail": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "63c5d177-5767-47ff-b8e9-faa8199653ad",
+              "leftValue": "={{ DateTime.fromRFC2822($json[\"pubDate\"]).setZone('Asia/Ho_Chi_Minh') }}",
+              "rightValue": "={{ DateTime.now().setZone('Asia/Ho_Chi_Minh').minus({ days: 1 }).set({ hour: 9, minute: 0, second: 0, millisecond: 0 }) }}\n",
+              "operator": {
+                "type": "dateTime",
+                "operation": "afterOrEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        896,
+        608
+      ],
+      "id": "8c9d3d64-df93-4877-9848-67270da31e13",
+      "name": "Filter today",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "chatId": "-1003289553939",
+        "text": "={{ $json.output }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2144,
+        608
+      ],
+      "id": "51f8235e-7d4e-4506-b646-8e26f8263685",
+      "name": "Send a text message",
+      "webhookId": "ee4d8d9b-56a4-415e-b306-9f7b68505b3f",
+    },
+    {
+      "parameters": {
+        "jsCode": "// Lấy dữ liệu từ item đầu tiên\nconst articles = $input.first().json.data;\n\n// Lấy ngày hiện tại\nconst now = new Date();\nconst dd = String(now.getDate()).padStart(2, '0');\nconst mm = String(now.getMonth() + 1).padStart(2, '0');\nconst yyyy = now.getFullYear();\n\n// Hàm lấy domain an toàn (không dùng URL object)\nfunction getDomain(link) {\n  try {\n    return link.replace(/^https?:\\/\\//, '').split('/')[0].replace('www.', '');\n  } catch (e) {\n    return 'nguồn không xác định';\n  }\n}\n\n// Tạo bản tin\nlet text = `📰 *Bản tin Cyber Security ngày ${dd}/${mm}/${yyyy}:*\\n\\n`;\n\narticles.forEach((a, i) => {\n  const domain = getDomain(a.link);\n  text += `${i + 1}. ${a.title} ( Nguồn: [${domain}](${a.link}) )\\n\\n`;\n});\n\nreturn [{\n  json: {\n    message: text.trim()\n  }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1568,
+        608
+      ],
+      "id": "dc1246fe-4858-4eea-bd3e-d98fbaf3fb0c",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 9
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        608
+      ],
+      "id": "08d176ea-5df4-489d-ab79-6ffc18c12ed0",
+      "name": "Schedule Trigger",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "url": "https://www.securityweek.com/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        224,
+        416
+      ],
+      "id": "b3a538a9-47fa-4e00-93d6-aca5c6d002eb",
+      "name": "SecurityWeek",
+      "retryOnFail": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "68820fa3-8172-4f2b-bd10-126e114b290c",
+              "name": "pubDate",
+              "value": "={{ $json.pubDate }}",
+              "type": "string"
+            },
+            {
+              "id": "39617da8-e8b6-4393-a6af-4ef843f958a3",
+              "name": "title",
+              "value": "={{ $json.title }}",
+              "type": "string"
+            },
+            {
+              "id": "42d208f3-46e1-49f7-947e-6bfaa7d02bd6",
+              "name": "content",
+              "value": "={{ $json.content }}",
+              "type": "string"
+            },
+            {
+              "id": "821cf5f2-39e2-4a15-8395-eb3070b465ff",
+              "name": "link",
+              "value": "={{ $json.link }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        448,
+        800
+      ],
+      "id": "4b8a3b82-d208-4088-902d-e1c839640c66",
+      "name": "Edit Fields4"
+    },
+    {
+      "parameters": {
+        "url": "https://0dayfans.com/feed.rss",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        224,
+        800
+      ],
+      "id": "d8f6cd80-6152-4e90-9298-4c3175bb7a32",
+      "name": "0dayfans",
+      "retryOnFail": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "url": "https://www.infosecurity-magazine.com/rss/news/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "0a8b8d9f-9b34-4ab2-b54f-e0a9cb0a8092",
+      "name": "Infosecurity Mag",
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "68820fa3-8172-4f2b-bd10-126e114b290c",
+              "name": "pubDate",
+              "value": "={{ $json.pubDate }}",
+              "type": "string"
+            },
+            {
+              "id": "39617da8-e8b6-4393-a6af-4ef843f958a3",
+              "name": "title",
+              "value": "={{ $json.title }}",
+              "type": "string"
+            },
+            {
+              "id": "42d208f3-46e1-49f7-947e-6bfaa7d02bd6",
+              "name": "content",
+              "value": "={{ $json.content }}",
+              "type": "string"
+            },
+            {
+              "id": "821cf5f2-39e2-4a15-8395-eb3070b465ff",
+              "name": "link",
+              "value": "={{ $json.link }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        448,
+        992
+      ],
+      "id": "4b6797d0-1a86-4fd7-bf26-ee17eee671e1",
+      "name": "Edit Fields5"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "68820fa3-8172-4f2b-bd10-126e114b290c",
+              "name": "pubDate",
+              "value": "={{ $json.pubDate }}",
+              "type": "string"
+            },
+            {
+              "id": "39617da8-e8b6-4393-a6af-4ef843f958a3",
+              "name": "title",
+              "value": "={{ $json.title }}",
+              "type": "string"
+            },
+            {
+              "id": "42d208f3-46e1-49f7-947e-6bfaa7d02bd6",
+              "name": "content",
+              "value": "={{ $json.content }}",
+              "type": "string"
+            },
+            {
+              "id": "821cf5f2-39e2-4a15-8395-eb3070b465ff",
+              "name": "link",
+              "value": "={{ $json.link }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        448,
+        1440
+      ],
+      "id": "29ce4950-293e-4f27-b744-b7d90fc367ef",
+      "name": "Edit Fields9"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bce09bc9-d75f-4861-b9b6-add31bbc16a2",
+              "leftValue": "={{ $json.categories.toJsonString() }}",
+              "rightValue": "Security",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        224,
+        1440
+      ],
+      "id": "8cf535d8-fe07-4359-ae3b-01233eb92715",
+      "name": "Filter"
+    },
+    {
+      "parameters": {
+        "url": "https://www.bleepingcomputer.com/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        1440
+      ],
+      "id": "e0175c3f-d488-4a16-b760-728a6bdcc31b",
+      "name": "bleeping computer"
+    },
+    {
+      "parameters": {
+        "url": "http://krebsonsecurity.com/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        1664
+      ],
+      "id": "eeea37b6-e5a7-4190-a134-0cbebd4c8b24",
+      "name": "Kreb on Security",
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "68820fa3-8172-4f2b-bd10-126e114b290c",
+              "name": "pubDate",
+              "value": "={{ $json.pubDate }}",
+              "type": "string"
+            },
+            {
+              "id": "39617da8-e8b6-4393-a6af-4ef843f958a3",
+              "name": "title",
+              "value": "={{ $json.title }}",
+              "type": "string"
+            },
+            {
+              "id": "42d208f3-46e1-49f7-947e-6bfaa7d02bd6",
+              "name": "content",
+              "value": "={{ $json.content }}",
+              "type": "string"
+            },
+            {
+              "id": "5888d914-99a9-45f0-85b7-15cbc4bd2129",
+              "name": "link",
+              "value": "={{ $json.link }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        224,
+        1664
+      ],
+      "id": "c19b0108-c5bf-4ba9-bfc5-0311852854ce",
+      "name": "Edit Fields6"
+    },
+    {
+      "parameters": {
+        "url": "https://cvefeed.io/rssfeed/newsroom.xml",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        224,
+        992
+      ],
+      "id": "fea4e88e-e82e-4e8c-9723-e818b40c82d8",
+      "name": "CVE FEED",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "compare": "selectedFields",
+        "fieldsToCompare": "link",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.removeDuplicates",
+      "typeVersion": 2,
+      "position": [
+        1120,
+        608
+      ],
+      "id": "6175045a-0b98-492f-9162-a9cc40cf42f5",
+      "name": "Remove Duplicates",
+      "alwaysOutputData": false,
+      "retryOnFail": true,
+      "maxTries": 5
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Vai trò:\nBạn là chuyên viên phân tích an ninh mạng, có nhiệm vụ tổng hợp tin tức an toàn thông tin từ **chính danh sách bài viết được cung cấp bên dưới** (không được tự tìm thêm nguồn hoặc tự tạo nội dung mới).\n\nGiới hạn:\n- **Chỉ xử lý các bài viết trong danh sách được cung cấp.**\n- **Không tự động tìm, thêm, hoặc suy diễn bài viết từ bất kỳ nguồn khác nào ngoài đầu vào.**\n- **Không viết bài mới, không dự đoán, không tham khảo thông tin bên ngoài danh sách.**\n\nNhiệm vụ:\n\n1. Đọc các bài mới từ danh sách đầu vào.\n\n2. Loại bỏ các bài trùng lặp từ nguồn khác nhau (nếu có).\n\n3. Lọc ra các bài viết liên quan đến:\n   - Lỗ hổng các service, update CVE.\n\n4. Dịch tiêu đề tin tức an ninh mạng / cybersecurity từ tiếng Anh sang tiếng Việt, sao cho: \n  + Giữ nguyên nghĩa kỹ thuật (tên mã, lỗ hổng, chiến dịch, malware, APT, CVE, v.v.). \n  + Diễn đạt tự nhiên, súc tích, phù hợp với cách viết tin công nghệ ở Việt Nam. \n  + Nếu tiêu đề có thuật ngữ chuyên ngành khó dịch, giữ nguyên tiếng Anh và thêm chú thích ngắn (trong ngoặc nếu cần).\n\nĐịnh dạng đầu ra:\n  - Đầu ra cuối cùng phải giữ format y nguyên như đầu vào, giữa 2 dòng phải có khoảng trống, không thêm bớt, sửa xóa, tối đa 10 bài báo. \n  - Chỉ dịch và lọc các bài báo như đã yêu cầu để phù hợp để đăng lên Telegram (markdown, dưới 4000 ký tự). \n\n\n```\n{{ $json.message }}\n```\n\n\n\n\n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        1792,
+        608
+      ],
+      "id": "18b898d0-e099-46b8-89e6-260c8c41cc3e",
+      "name": "AI Agent",
+      "retryOnFail": true,
+      "maxTries": 5
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemma-4-31b-it",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        1864,
+        832
+      ],
+      "id": "94e0084e-8740-4dee-964d-b3852f01479d",
+      "name": "Google Gemini Chat Model",
+      "retryOnFail": true,
+      "maxTries": 5,
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        1216
+      ],
+      "id": "70a49330-5ca1-4568-a185-fe81dcb4cb95",
+      "name": "Error Trigger"
+    },
+    {
+      "parameters": {
+        "workflowId": "TUZTnHHLEaBqe7d1",
+        "options": {}
+      },
+      "id": "4736912b-1d4b-44ac-90ab-7199a46a3592",
+      "name": "Execute Main Workflow",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1,
+      "position": [
+        448,
+        1216
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 30,
+        "unit": "minutes"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        224,
+        1216
+      ],
+      "id": "462e3012-0078-4f1e-b18e-a0355daf04e2",
+      "name": "Wait 30m",
+      "webhookId": "d8cb3a44-0bf0-4259-a31d-3309978576c1"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "HackerNews": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields3": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Filter today",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Whitehat vn": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter today": {
+      "main": [
+        [
+          {
+            "node": "Remove Duplicates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "SecurityWeek",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Whitehat vn",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "CVE FEED",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "0dayfans",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HackerNews",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SecurityWeek": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields4": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 4
+          }
+        ]
+      ]
+    },
+    "0dayfans": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Infosecurity Mag": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields5": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 5
+          }
+        ]
+      ]
+    },
+    "Filter": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "bleeping computer": {
+      "main": [
+        [
+          {
+            "node": "Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Kreb on Security": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CVE FEED": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Remove Duplicates": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Error Trigger": {
+      "main": [
+        [
+          {
+            "node": "Wait 30m",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 30m": {
+      "main": [
+        [
+          {
+            "node": "Execute Main Workflow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false,
+    "timeSavedMode": "fixed",
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "versionId": "445a3562-3035-46af-acb9-2b2eec327f81",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8429cb9b94dde405360dac4b8d9d094346475c972d49ade3c7f5fa0e494354ed"
+  },
+  "id": "TUZTnHHLEaBqe7d1",
+  "tags": []
+}
